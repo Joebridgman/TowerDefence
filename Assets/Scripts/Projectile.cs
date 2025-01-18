@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +28,11 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag == "Dog") {
-            collision.gameObject.GetComponent<Dog>().health -= damage;
+            var dogObject = collision.gameObject.GetComponent<Dog>();
+            dogObject.health -= damage;
+            dogObject.hurtTimer = 0;
+            dogObject.GetComponent<SpriteRenderer>().color = Color.red;
+            dogObject.GetComponent<SpriteRenderer>().sprite = dogObject.hurtSprite;
             Debug.Log("Hit from " + gameObject.name + " for " + damage + " damage.");
         }
     }

@@ -8,6 +8,9 @@ public class Dog : MonoBehaviour
     public Waypoint target;
     public float speed;
     public int health;
+    public Sprite defaultSprite;
+    public Sprite hurtSprite;
+    public float hurtTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,8 @@ public class Dog : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        hurtTimer += Time.deltaTime;
+
         if (target != null) {
             transform.position += (transform.position - target.transform.position).normalized * -speed;
         }
@@ -29,6 +34,11 @@ public class Dog : MonoBehaviour
         if (health <= 0) { 
             Destroy(gameObject);
             //death animation
+        }
+
+        if (hurtTimer > 0.5) {
+            GetComponent<SpriteRenderer>().sprite = defaultSprite;
+            GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 

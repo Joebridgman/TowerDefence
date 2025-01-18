@@ -29,7 +29,7 @@ public class Milo : Cat
         var newObject = Instantiate(attackObject, gameObject.transform.position, new Quaternion());
         newObject.GetComponent<Rigidbody2D>().AddForce((gameObject.transform.position -
                                                         currentTarget.transform.position).normalized * -attackObject.speed);
-        
+        newObject.GetComponent<SpriteRenderer>().color = Color.yellow;
         newObject.currentLifetime = 0;
     }
 }
