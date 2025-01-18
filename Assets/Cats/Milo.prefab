@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7306904700177093884}
   - component: {fileID: 4897782337379169470}
-  - component: {fileID: -3202129656068528050}
+  - component: {fileID: -8788997773995443930}
   - component: {fileID: -363560859503113484}
   m_Layer: 0
-  m_Name: Alfie
+  m_Name: Milo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -800042581
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c14393627e99284d8ca19a200ccdfca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4597f227300ac8d468d99ab851ed243e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-3202129656068528050
+--- !u!114 &-8788997773995443930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,17 +95,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 737783142850679460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcb6044c54a24a04f89f568c122e06b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 87303799183e0da459b018ee3ed594f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 6
+  range: 7
   targets: []
-  attackCooldown: 2
-  defaultSprite: {fileID: 21300000, guid: 2c14393627e99284d8ca19a200ccdfca, type: 3}
-  attackSprite: {fileID: 21300000, guid: 795c8413a7881e540909f84262c9fd55, type: 3}
-  rotation: 90
-  attackObject: {fileID: -5325732784196801781, guid: 21ad6aeba3d342e4d994d349cf81299e, type: 3}
-  attackRate: 0.1
+  attackCooldown: 1
+  defaultSprite: {fileID: 21300000, guid: 4597f227300ac8d468d99ab851ed243e, type: 3}
+  attackSprite: {fileID: 21300000, guid: 4597f227300ac8d468d99ab851ed243e, type: 3}
+  rotation: 0
+  attackObject: {fileID: -5325732784196801781, guid: 8a19b22a7416503438d8ec2b886c8675, type: 3}
+  attackRate: 0
 --- !u!58 &-363560859503113484
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -119,6 +119,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.32, y: -0.9}
   serializedVersion: 2
   m_Radius: 1.775
