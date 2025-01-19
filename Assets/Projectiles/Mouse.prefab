@@ -137,7 +137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 50
+  speed: 150
   lifetime: 1.12
   damage: 15
   currentLifetime: 0
+  pierce: 1
+  chain: 0

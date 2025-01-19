@@ -104,6 +104,7 @@ MonoBehaviour:
   health: 100
   defaultSprite: {fileID: 21300000, guid: 74a13a7fb9e93dc4b97002eb35bb900f, type: 3}
   hurtSprite: {fileID: 21300000, guid: b08f6cc9bfa55b646b46214d84e2a27e, type: 3}
+  hurtTimer: 0
 --- !u!58 &-1911903218917154882
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -119,7 +120,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 1.42
 --- !u!50 &-2632403652857470002
 Rigidbody2D:
   serializedVersion: 4

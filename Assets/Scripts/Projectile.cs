@@ -11,6 +11,8 @@ public class Projectile : MonoBehaviour
     public float lifetime;
     public int damage;
     public float currentLifetime;
+    public int pierce;
+    public int chain;
 
     // Update is called once per frame
     void Update()
@@ -21,9 +23,10 @@ public class Projectile : MonoBehaviour
             transform.position += (transform.position - target.transform.position).normalized * -speed;
         }
 
-        if (currentLifetime > lifetime) {
+        if (currentLifetime > lifetime || pierce < 0) {
             Destroy(gameObject);
         }
+
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
@@ -34,6 +37,7 @@ public class Projectile : MonoBehaviour
             dogObject.GetComponent<SpriteRenderer>().color = Color.red;
             dogObject.GetComponent<SpriteRenderer>().sprite = dogObject.hurtSprite;
             Debug.Log("Hit from " + gameObject.name + " for " + damage + " damage.");
+            pierce--;
         }
     }
 }

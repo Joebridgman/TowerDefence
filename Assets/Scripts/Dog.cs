@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,10 @@ public class Dog : MonoBehaviour
 
         if (target != null) {
             transform.position += (transform.position - target.transform.position).normalized * -speed;
+            if (Math.Pow(transform.position.x - target.transform.position.x, 2) +
+            Math.Pow(transform.position.y - target.transform.position.y, 2) < 0.01) {
+                target = target.nextWaypoint;
+            }
         }
         else {
             Destroy(gameObject);
@@ -39,12 +44,6 @@ public class Dog : MonoBehaviour
         if (hurtTimer > 0.5) {
             GetComponent<SpriteRenderer>().sprite = defaultSprite;
             GetComponent<SpriteRenderer>().color = Color.white;
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.tag == "Waypoint") {
-            target = collision.gameObject.GetComponent<Waypoint>().nextWaypoint;
-        }
+        }       
     }
 }
