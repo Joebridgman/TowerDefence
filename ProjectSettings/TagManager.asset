@@ -43,9 +43,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Projectiles
+  - name: Background
     uniqueID: 1259962669
     locked: 0
-  - name: Dogs
+  - name: Midground
     uniqueID: 3494924715
+    locked: 0
+  - name: Foreground
+    uniqueID: 660681753
+    locked: 0
+  - name: UI
+    uniqueID: 3320939739
     locked: 0
