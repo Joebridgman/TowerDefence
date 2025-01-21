@@ -30,7 +30,7 @@ public class Projectile : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.tag == "Dog") {
+        if (collision.tag == "Dog" && pierce >= 0) {
             var dogObject = collision.gameObject.GetComponent<Dog>();
             dogObject.health -= damage;
             dogObject.hurtTimer = 0;
