@@ -7,6 +7,7 @@ using UnityEngine;
 public class Dog : MonoBehaviour {
 
     public Waypoint target;
+    public int value;
     public float speed;
     public int health;
     public Sprite defaultSprite;
@@ -37,11 +38,6 @@ public class Dog : MonoBehaviour {
         else {
             Destroy(gameObject);
             //take lives off the player
-        }
-
-        if (health <= 0) {
-            Destroy(gameObject);
-            //death animation
         }
 
         if (hurtTimer > 0.5) {
